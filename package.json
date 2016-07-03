@@ -1,6 +1,6 @@
 {
   "name": "onoff-rotary",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "EventEmitter based micro-library for use with onoff to read output from rotary encoders on Raspberry PI and others",
   "main": "index.js",
   "scripts": {
