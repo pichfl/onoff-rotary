@@ -44,7 +44,6 @@ RotaryEncoder.prototype = EventEmitter.prototype;
 
 RotaryEncoder.prototype.tick = function() {
 	const { a, b } = this;
-	const state = `${this.a}${this.b}`;
 
 	if (a === 0 && b === 0 || a === 1 && b === 1) {
 		this.emit('rotation', 1);
@@ -53,8 +52,6 @@ RotaryEncoder.prototype.tick = function() {
 	}
 
 	return this;
-
-	this.emit('rotation', 0);
 };
 
 function rotaryEncoder(pinA, pinB) {
