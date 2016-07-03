@@ -57,8 +57,8 @@ RotaryEncoder.prototype.tick = function() {
 	this.emit('rotation', 0);
 };
 
-function rotatyEncoder(pinA, pinB) {
+function rotaryEncoder(pinA, pinB) {
 	return new RotaryEncoder(pinA, pinB);
 }
 
-module.exports = rotatyEncoder;
+module.exports = rotaryEncoder;
