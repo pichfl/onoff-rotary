@@ -42,7 +42,7 @@ function RotaryEncoder(pinA, pinB) {
 
 RotaryEncoder.prototype = EventEmitter.prototype;
 
-RotaryEncoder.prototype.tick = function() {
+RotaryEncoder.prototype.tick = function tick() {
 	const { a, b } = this;
 
 	if (a === 0 && b === 0 || a === 1 && b === 1) {
@@ -54,8 +54,6 @@ RotaryEncoder.prototype.tick = function() {
 	return this;
 };
 
-function rotaryEncoder(pinA, pinB) {
+module.exports = function rotaryEncoder(pinA, pinB) {
 	return new RotaryEncoder(pinA, pinB);
-}
-
-module.exports = rotaryEncoder;
+};
